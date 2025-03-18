@@ -7,13 +7,13 @@ body {
   height: 100dvh;
   margin: 0;
   background-image: url("../../img/bannerPrincipal.jpg");
-  background-size: cover; /* A imagem cobre toda a área disponível */
-  background-position: center; /* A imagem será centralizada */
+  background-size: cover;
+  background-position: center;
   color: #333;
 }
 
 .quiz-container {
-  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco translúcido */
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -70,4 +70,29 @@ h1 {
 
 .botao-venda:hover {
   background-color: #ee82ee;
+}
+
+@media (max-width: 768px) {
+  .quiz-container {
+    width: 60vw;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  #pergunta {
+    font-size: 12px;
+  }
+  #opcoes button {
+    font-size: 12px;
+  }
+  #mensagem-resultado {
+    font-size: 0.8rem;
+  }
+  .botao-venda {
+    font-size: 10px;
+    margin-top: 10px;
+  }
 }

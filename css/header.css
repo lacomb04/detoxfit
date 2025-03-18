@@ -19,6 +19,7 @@ header {
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
   animation: entradaClique 1s ease-in-out forwards; /* Aplica a animação de entrada */
   transform-origin: center; /* Garante que a escala seja feita a partir do centro */
 }
@@ -65,17 +66,30 @@ header {
   .textoBanner {
     width: 80vw;
     top: 40%;
+    font-size: 4rem;
+  }
+}
+@media (max-width: 1036px) {
+  .textoBanner {
+    font-size: 3.3rem;
   }
 }
 @media (max-width: 816px) {
   .textoBanner {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 600px) {
   .bannerPrincipal {
     height: 100dvh;
+  }
+  .textoBanner {
+    font-size: 1.5rem;
+    top: 50%;
+  }
+  .buttomBanner {
+    font-size: 12px;
   }
 }
 
