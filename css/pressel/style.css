@@ -1,0 +1,73 @@
+body {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100dvh;
+  margin: 0;
+  background-image: url("../../img/bannerPrincipal.jpg");
+  background-size: cover; /* A imagem cobre toda a área disponível */
+  background-position: center; /* A imagem será centralizada */
+  color: #333;
+}
+
+.quiz-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco translúcido */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Klein", sans-serif;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #4caf50;
+  font-weight: 600;
+}
+
+#pergunta {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+#opcoes button {
+  display: block;
+  width: calc(100% - 22px);
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e8f5e9;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#opcoes button:hover {
+  background-color: #c8e6c9;
+}
+
+.botao-venda {
+  background-color: #d31cd3;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-venda:hover {
+  background-color: #ee82ee;
+}

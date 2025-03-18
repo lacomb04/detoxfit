@@ -1,0 +1,74 @@
+.secao-detox {
+  background-color: rgb(230, 225, 255);
+  padding: 50px 20px;
+}
+
+.secao-detox .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.secao-detox .imagem-detox img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.secao-detox .conteudo-detox {
+  max-width: 50%;
+  text-align: left;
+}
+
+.secao-detox .conteudo-detox h2 {
+  font-family: "Klein", sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.secao-detox .conteudo-detox p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.secao-detox .botao-detox {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  background-color: #ee82ee;
+  border: 1px solid #333;
+  color: #333;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.secao-detox .botao-detox:hover {
+  background-color: #d31cd3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .secao-detox .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .secao-detox .imagem-detox img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .secao-detox .conteudo-detox {
+    max-width: 100%;
+    text-align: center;
+  }
+}

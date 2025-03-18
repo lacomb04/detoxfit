@@ -1,0 +1,117 @@
+header {
+  position: relative;
+  width: 100%;
+}
+
+.container_banner {
+  width: 100%;
+}
+.textoBanner {
+  font-family: "Klein", sans-serif;
+  font-weight: 800;
+  font-stretch: expanded;
+  width: 50vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  animation: entradaClique 1s ease-in-out forwards; /* Aplica a animação de entrada */
+  transform-origin: center; /* Garante que a escala seja feita a partir do centro */
+}
+.bannerPrincipal {
+  width: 100vw;
+  height: 80vh;
+  object-fit: cover;
+  display: block;
+}
+
+.logo {
+  position: absolute;
+  width: 150px;
+  left: 10vw;
+  top: 2dvh;
+  transform: translate(-50%, -50%);
+  animation: fadeAndScale 0.5s ease-out forwards;
+}
+
+.buttomBanner {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  text-wrap: nowrap;
+  background-color: #d0e8a7;
+  font-family: "Inter", sans-serif;
+  border: 2px solid #2b2b2b;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.5s ease; /* Adicionada transição para transform */
+  transform: translateY(20px); /* Inicialmente movido 20px para baixo */
+  opacity: 0; /* Inicialmente invisível */
+  animation: fadeInMoveUp 0.8s ease-out forwards; /* Adicionada animação */
+}
+
+.buttomBanner:hover {
+  background-color: #acc588; /* Cor de fundo mais escura ao passar o mouse */
+}
+@media (max-width: 1636px) {
+  .textoBanner {
+    width: 80vw;
+    top: 40%;
+  }
+}
+@media (max-width: 816px) {
+  .textoBanner {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .bannerPrincipal {
+    height: 100dvh;
+  }
+}
+
+@keyframes fadeAndScale {
+  from {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInMoveUp {
+  0% {
+    transform: translateY(20px) translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
+    opacity: 1;
+  }
+}
+
+@keyframes entradaClique {
+  0% {
+    transform: scale(0.8) translateX(-50%) translateY(-50%); /* Começa menor */
+    opacity: 0; /* Começa invisível */
+  }
+  50% {
+    transform: scale(1.1) translateX(-50%) translateY(-50%); /* Aumenta */
+    opacity: 1; /* Fica visível */
+  }
+  100% {
+    transform: scale(1) translateX(-50%) translateY(-50%); /* Volta ao tamanho original */
+    opacity: 1; /* Permanece visível */
+  }
+}

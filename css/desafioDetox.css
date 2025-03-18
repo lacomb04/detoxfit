@@ -1,0 +1,78 @@
+.desafio-detox {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.desafio-detox .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.desafio-detox h2 {
+  font-family: "Klein", sans-serif;
+  font-weight: 800;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.desafio-detox .cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.desafio-detox .card {
+  width: 250px;
+  height: 400px;
+  font-family: "Inter", sans-serif;
+  margin: 20px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.desafio-detox .card-icon img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.desafio-detox .card h3 {
+  font-family: "klein", sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.desafio-detox .card p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
+}
+
+.desafio-detox .card.card-laranja {
+  border: 2px solid rgb(253, 159, 91);
+}
+
+.desafio-detox .card.card-azul {
+  border: 2px solid rgb(173, 176, 255);
+}
+
+.desafio-detox .card.card-rosa {
+  border: 2px solid rgb(255, 172, 236);
+}
+
+.desafio-detox .card.card-azul-claro {
+  border: 2px solid rgb(150, 201, 255);
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .desafio-detox .card {
+    width: 100%;
+    height: 300px;
+    max-width: 350px;
+  }
+}

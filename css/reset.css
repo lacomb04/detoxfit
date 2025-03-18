@@ -1,0 +1,65 @@
+/* Reset CSS - Padrão Moderno */
+
+/* Remove margens e paddings padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ajusta fontes para uma melhor renderização */
+html {
+  font-size: 100%; /* Define 1rem = 16px */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+}
+
+/* Remove estilos padrão de listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove decorações padrão de links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove estilos padrão de botões */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Garante que imagens não ultrapassem seus containers */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Corrige comportamento de tabelas */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Define um estilo base para o body */
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+/* Define um cursor padrão para interatividade */
+button,
+a {
+  cursor: pointer;
+}
