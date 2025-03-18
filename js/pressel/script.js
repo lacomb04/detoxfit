@@ -123,3 +123,5 @@ function gerarMensagemPersonalizada() {
 mostrarPergunta();
 
 proximoBotao.style.display = "none";
+
+ola mundo
