@@ -1,0 +1,31 @@
+.footer-section {
+  background: url("../img/backgroundfooter.jpg") no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  color: white;
+  padding: 100px 20px;
+  font-family: "Klein", sans-serif;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.575);
+}
+.footer-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+.footer-content h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-weight: 800;
+  line-height: 1;
+}
+.footer-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #fff;
+  background-color: rgba(43, 42, 42, 0.582);
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
