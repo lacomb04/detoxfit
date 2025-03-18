@@ -74,19 +74,19 @@ h1 {
 
 @media (max-width: 768px) {
   .quiz-container {
-    width: 60vw;
+    width: 75vw;
   }
   h1 {
-    font-size: 1rem;
+    font-size: 2rem;
   }
   h2 {
     font-size: 1rem;
   }
   #pergunta {
-    font-size: 12px;
+    font-size: 20px;
   }
   #opcoes button {
-    font-size: 12px;
+    font-size: 18px;
   }
   #mensagem-resultado {
     font-size: 0.8rem;
