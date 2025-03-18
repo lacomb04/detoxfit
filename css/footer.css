@@ -29,3 +29,9 @@
   padding: 20px;
   font-family: "Inter", sans-serif;
 }
+
+@media (max-width: 600px) {
+  .footer-content h2 {
+    font-size: 2rem;
+  }
+}
