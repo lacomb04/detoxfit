@@ -61,6 +61,41 @@ header {
 .buttomBanner:hover {
   background-color: #acc588; /* Cor de fundo mais escura ao passar o mouse */
 }
+
+/* Whats */
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #25d366;
+  border-radius: 30px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.whatsapp-container:hover {
+  background-color: #128c7e;
+}
+
+/* Ícone do WhatsApp */
+.whatsapp-icon {
+  font-size: 30px;
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+/* Estilo do texto da mensagem */
+.whatsapp-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  white-space: nowrap; /* Evita quebra de linha no texto */
+}
 @media (max-width: 1636px) {
   .textoBanner {
     width: 80vw;
