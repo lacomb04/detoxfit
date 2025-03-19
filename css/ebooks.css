@@ -2,9 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0 auto;
   gap: 20px;
   padding: 40px;
-  background-color: #eae2f8;
+  background-color: #fff;
 }
 .cardVenda {
   background: white;
@@ -60,7 +61,7 @@
 
 @media (max-width: 600px) {
   .cardVenda {
-    max-width: 90vh;
-    width: 90vh;
+    max-width: 95vh;
+    width: 95vh;
   }
 }
