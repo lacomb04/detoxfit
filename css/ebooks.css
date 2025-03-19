@@ -53,3 +53,9 @@
 .btn:hover {
   background-color: #5a54e0;
 }
+
+@media (max-width: 600px) {
+  .cardVenda {
+    width: 90vh;
+  }
+}
