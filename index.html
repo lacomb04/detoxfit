@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detox Fit — Ebook com Receitas Detox</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="#" class="navbar-logo">Detox Fit</a>
+    <ul class="navbar-links">
+      <li><a href="#volumes">Volumes</a></li>
+      <li><a href="#transformacao">Transformação</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><button class="navbar-cta">Comprar</button></li>
+    </ul>
+  </nav>
+
+  <section class="hero-section" id="hero">
+    <div class="deco-container" aria-hidden="true" id="decoContainer"></div>
+
+    <div class="carousel-slider" id="carouselSlider"></div>
+
+    <button class="carousel-arrow prev" id="prevBtn" aria-label="Anterior">‹</button>
+    <button class="carousel-arrow next" id="nextBtn" aria-label="Próximo">›</button>
+
+    <div class="carousel-dots-wrap">
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <section class="pain-section section-divider" id="problema">
+    <div class="section-deco" aria-hidden="true"></div>
+    <div class="pain-inner">
+      <div class="pain-content">
+        <span class="pain-badge">VOCÊ SE IDENTIFICA?</span>
+        <h2 class="section-title pain-title">Cansaço, inchaço e falta de energia?</h2>
+        <ul class="pain-list">
+          <li>Você acorda cansada mesmo depois de dormir bem?</li>
+          <li>Sente o corpo inchado e o intestino preso?</li>
+          <li>Não consegue emagrecer mesmo comendo pouco?</li>
+          <li>A pele está opaca, sem viço e com acne?</li>
+        </ul>
+      </div>
+      <div class="pain-divider">
+        <span class="pain-arrow">↓</span>
+        <span class="pain-then">ENTÃO</span>
+        <span class="pain-arrow">↓</span>
+      </div>
+      <div class="pain-solution">
+        <div class="solution-icon-wrap">
+          <span class="solution-icon">🌿</span>
+        </div>
+        <h2 class="section-title solution-title">O Detox Fit é a solução</h2>
+        <p class="solution-text">65+ receitas criadas por especialistas para desintoxicar seu corpo, eliminar o inchaço e devolver sua energia — com ingredientes fáceis de encontrar e preparo rápido.</p>
+        <button class="btn-primary pain-cta">Quero Começar Agora</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="volumes-section section-alt section-divider" id="volumes">
+    <div class="section-deco" aria-hidden="true"></div>
+    <h2 class="section-title">Escolha Seu Volume</h2>
+    <p class="section-subtitle">Cada edição é focada em um objetivo. Ou leve o combo completo e economize.</p>
+    <div class="volumes-grid">
+      <div class="volume-card" data-flavor="verde">
+        <div class="volume-badge" style="background:#43A047">VOL 1</div>
+        <div class="volume-bottle-wrap" style="background:linear-gradient(180deg,#43A047,#2E7D32)">
+          <img class="volume-bottle-img" src="assets/images/bottles/detoxverde.webp" alt="Detox Verde" loading="lazy">
+        </div>
+        <h3 class="volume-title">Detox Verde</h3>
+        <p class="volume-desc">30 receitas para renovar seu corpo com ingredientes que desintoxicam e energizam.</p>
+        <ul class="volume-features">
+          <li>30 receitas exclusivas</li>
+          <li>Lista de compras</li>
+          <li>Plano 7 dias</li>
+        </ul>
+        <div class="volume-price"><span class="volume-currency">R$</span>27<span class="volume-cents">,90</span></div>
+        <button class="btn-primary volume-btn">Comprar</button>
+      </div>
+      <div class="volume-card" data-flavor="vermelho">
+        <div class="volume-badge" style="background:#E53935">VOL 2</div>
+        <div class="volume-bottle-wrap" style="background:linear-gradient(180deg,#E53935,#C62828)">
+          <img class="volume-bottle-img" src="assets/images/bottles/detoxvermelho.webp" alt="Detox Vermelho" loading="lazy">
+        </div>
+        <h3 class="volume-title">Detox Vermelho</h3>
+        <p class="volume-desc">20 receitas antioxidantes poderosas para proteger e revitalizar seu corpo.</p>
+        <ul class="volume-features">
+          <li>20 receitas funcionais</li>
+          <li>Cardápio semanal</li>
+          <li>Dicas nutricionais</li>
+        </ul>
+        <div class="volume-price"><span class="volume-currency">R$</span>27<span class="volume-cents">,90</span></div>
+        <button class="btn-primary volume-btn">Comprar</button>
+      </div>
+      <div class="volume-card" data-flavor="laranja">
+        <div class="volume-badge" style="background:#FB8C00">VOL 3</div>
+        <div class="volume-bottle-wrap" style="background:linear-gradient(180deg,#FB8C00,#EF6C00)">
+          <img class="volume-bottle-img" src="assets/images/bottles/detoxlaranja.webp" alt="Detox Laranja" loading="lazy">
+        </div>
+        <h3 class="volume-title">Detox Laranja</h3>
+        <p class="volume-desc">25 receitas termogênicas para acelerar o metabolismo e queimar gordura.</p>
+        <ul class="volume-features">
+          <li>25 receitas termogênicas</li>
+          <li>Plano alimentar</li>
+          <li>Diário de resultados</li>
+        </ul>
+        <div class="volume-price"><span class="volume-currency">R$</span>27<span class="volume-cents">,90</span></div>
+        <button class="btn-primary volume-btn">Comprar</button>
+      </div>
+      <div class="volume-card volume-card-combo" data-flavor="combo">
+        <div class="volume-badge volume-badge-combo">COMPLETO</div>
+        <div class="volume-bottle-wrap combo-bottle-wrap">
+          <div class="combo-dots">
+            <span style="background:#43A047"></span>
+            <span style="background:#E53935"></span>
+            <span style="background:#FB8C00"></span>
+          </div>
+          <span class="volume-bottle-icon">📦</span>
+        </div>
+        <h3 class="volume-title">Pacote Completo</h3>
+        <p class="volume-desc">Os 3 volumes com todas as 75 receitas em um único combo com desconto especial.</p>
+        <ul class="volume-features">
+          <li>75 receitas no total</li>
+          <li>3 planos alimentares</li>
+          <li>Bônus exclusivo</li>
+          <li>Economia de 30%</li>
+        </ul>
+        <div class="volume-price"><span class="volume-currency">R$</span>57<span class="volume-cents">,90</span></div>
+        <button class="btn-primary volume-btn">Comprar Agora</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits-section section-divider" id="beneficios">
+    <div class="section-deco" aria-hidden="true"></div>
+    <h2 class="section-title">Por que Detox Fit?</h2>
+    <p class="section-subtitle">Mais de 65 receitas testadas e aprovadas para transformar sua alimentação.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card-large">
+        <div class="benefit-icon-wrap" style="background:#E8F5E9;color:#2E7D32">📖</div>
+        <h3 class="benefit-title">65+ Receitas</h3>
+        <p class="benefit-desc">Sucos, smoothies, bowls e refeições leves organizadas por objetivo.</p>
+      </div>
+      <div class="benefit-card-large">
+        <div class="benefit-icon-wrap" style="background:#FFF3E0;color:#E65100">📋</div>
+        <h3 class="benefit-title">Planos Prontos</h3>
+        <p class="benefit-desc">Cardápios de 7, 14 e 21 dias para você seguir sem pensar.</p>
+      </div>
+      <div class="benefit-card-large">
+        <div class="benefit-icon-wrap" style="background:#FFEBEE;color:#C62828">🛒</div>
+        <h3 class="benefit-title">Lista de Compras</h3>
+        <p class="benefit-desc">Ingredientes organizados por receita com sugestão de substituições.</p>
+      </div>
+      <div class="benefit-card-large">
+        <div class="benefit-icon-wrap" style="background:#F3E5F5;color:#6A1B9A">🎯</div>
+        <h3 class="benefit-title">Resultado Rápido</h3>
+        <p class="benefit-desc">Método comprovado para desinchar e ganhar energia em dias.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-section section-alt section-divider" id="funciona">
+    <div class="section-deco" aria-hidden="true"></div>
+    <h2 class="section-title">Como Funciona</h2>
+    <p class="section-subtitle">Você recebe o ebook e começa a transformação imediatamente.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3 class="step-title">Escolha seu Volume</h3>
+        <p class="step-desc">Verde, vermelho ou laranja — cada um focado em um objetivo diferente.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3 class="step-title">Baixe o PDF</h3>
+        <p class="step-desc">Após a confirmação, você recebe o link de download no seu email.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3 class="step-title">Comece a Transformação</h3>
+        <p class="step-desc">Siga as receitas e veja seu corpo mudar em poucos dias.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="parallax-section" id="transformacao">
+    <div class="parallax-bg" id="parallaxBg">
+      <div class="parallax-placeholder"></div>
+    </div>
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content">
+      <span class="parallax-badge">TRANSFORMAÇÃO REAL</span>
+      <h2 class="parallax-title">Sua jornada começa aqui</h2>
+      <p class="parallax-text">Cada ingrediente, cada receita, cada gota — um passo mais perto da sua melhor versão.</p>
+      <button class="btn-primary parallax-cta">Quero Emagrecer Agora</button>
+    </div>
+  </section>
+
+  <section class="testimonials-section section-alt section-divider" id="depoimentos">
+    <div class="section-deco" aria-hidden="true"></div>
+    <h2 class="section-title">Quem Usou, Aprovou</h2>
+    <p class="section-subtitle">Veja os resultados de quem já transformou sua saúde com o Detox Fit</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Em 7 dias perdi 3kg e o inchaço sumiu! As receitas são fáceis e deliciosas. Minha pele está muito mais bonita."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#E8F5E9">AM</div>
+          <div>
+            <strong class="testimonial-name">Ana Maria</strong>
+            <span class="testimonial-result">Perdeu 3kg em 7 dias</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Finalmente encontrei um plano que cabe na minha rotina. Faço as receitas em 15 minutos e estou me sentindo muito mais disposta!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#FFF3E0">JL</div>
+          <div>
+            <strong class="testimonial-name">Juliana Lima</strong>
+            <span class="testimonial-result">Eliminou 4kg em 10 dias</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"O combo completo é imperdível! Comprei os 3 volumes e não me arrependo. Cada receita é uma descoberta nova. Super recomendo!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#FCE4EC">PR</div>
+          <div>
+            <strong class="testimonial-name">Patrícia Rocha</strong>
+            <span class="testimonial-result">Resultado visível em 5 dias</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section section-divider" id="faq">
+    <div class="section-deco" aria-hidden="true"></div>
+    <h2 class="section-title">Dúvidas Frequentes</h2>
+    <p class="section-subtitle">Tire suas dúvidas antes de começar</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Preciso ter experiência na cozinha?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Não! As receitas foram desenvolvidas para qualquer pessoa, mesmo quem nunca cozinhou. São instruções passo a passo com ingredientes fáceis de encontrar.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Em quanto tempo vou ver resultados?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>A maioria das mulheres relata melhora no inchaço e mais energia já nos primeiros 3 a 5 dias. Resultados expressivos de emagrecimento são percebidos na primeira semana seguindo o protocolo.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Como vou receber o ebook após a compra?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Imediatamente após a confirmação do pagamento, você recebe o link de download no email cadastrado. O arquivo é em PDF e pode ser aberto no celular, tablet ou computador.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>E se eu não gostar? Tem garantia?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Sim! Você tem 7 dias de garantia incondicional. Se por qualquer motivo não ficar satisfeita, devolvemos 100% do seu dinheiro. Sem burocracia.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Os ingredientes são difíceis de encontrar?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Todos os ingredientes são encontrados em supermercados comuns ou feiras livres. Nada de produtos importados ou ingredientes raros.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guarantee-section" id="garantia">
+    <div class="section-deco" aria-hidden="true"></div>
+    <div class="guarantee-inner">
+      <div class="guarantee-badge-wrap">
+        <span class="guarantee-badge">GARANTIA 7 DIAS</span>
+      </div>
+      <h2 class="section-title guarantee-title">Risco Zero</h2>
+      <p class="guarantee-text">Você tem 7 dias para testar o Detox Fit. Se por qualquer motivo não ficar satisfeita, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+      <div class="guarantee-seals">
+        <div class="guarantee-seal">
+          <span class="seal-icon">🔒</span>
+          <span class="seal-text">Pagamento 100% Seguro</span>
+        </div>
+        <div class="guarantee-seal">
+          <span class="seal-icon">📥</span>
+          <span class="seal-text">Acesso Imediato</span>
+        </div>
+        <div class="guarantee-seal">
+          <span class="seal-icon">🔄</span>
+          <span class="seal-text">7 Dias de Garantia</span>
+        </div>
+      </div>
+      <button class="btn-primary guarantee-btn">Quero Emagrecer Agora</button>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer">
+      <div class="footer-logo">Detox Fit</div>
+      <ul class="footer-links">
+        <li><a href="#volumes">Volumes</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#garantia">Garantia</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 Detox Fit. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('variables.css');
+@import url('components.css');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-surface);
+  color: var(--color-text-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-gradient) 100%);
+  transition: background var(--theme-transition);
+  overflow: hidden;
+  padding-top: var(--nav-height);
+  min-height: 100dvh;
+}
+
+.carousel-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.carousel-slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: var(--space-7) var(--space-9);
+  gap: var(--space-6);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  pointer-events: none;
+  position: relative;
+  height: auto;
+  min-height: calc(100dvh - var(--nav-height));
+}
+
+.carousel-slide.active .hero-content {
+  pointer-events: auto;
+}
+
+.carousel-slide.active .hero-visual {
+  pointer-events: auto;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 540px;
+  margin-right: var(--space-5);
+}
+
+.benefits-list {
+  display: flex;
+  gap: var(--space-2);
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.hero-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin-top: var(--space-1);
+}
+
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.benefits-section {
+  padding: var(--space-8) var(--space-9) var(--space-7);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.how-section {
+  padding: var(--space-7) var(--space-9);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-footer {
+  background: var(--color-surface);
+}
+
+@keyframes float-deco {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%      { transform: translateY(-12px) rotate(4deg); }
+  66%      { transform: translateY(-5px) rotate(-2deg); }
+}
+
+@keyframes float-fruit {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-10px); }
+}
+
+.deco-circle {
+  animation: float-deco 5s ease-in-out infinite;
+  animation-delay: var(--deco-delay, 0s);
+}
+
+.fruit-visual {
+  animation: float-fruit 4s ease-in-out infinite;
+  animation-delay: var(--deco-delay, 0s);
+}
+
+@media (min-width: 1025px) {
+  .parallax-section {
+    height: 100vh;
+    min-height: 700px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    max-height: 100dvh;
+    overflow-y: auto;
+  }
+  .carousel-slide.active {
+    min-height: calc(100dvh - var(--nav-height));
+  }
+  .navbar {
+    padding: 0 var(--space-7);
+  }
+  .carousel-slide {
+    padding: var(--space-6) var(--space-7);
+  }
+  .pain-section,
+  .volumes-section,
+  .benefits-section,
+  .testimonials-section,
+  .faq-section,
+  .how-section,
+  .guarantee-section {
+    padding: var(--space-7);
+  }
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer {
+    padding: var(--space-5) var(--space-7);
+  }
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .volumes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .volume-bottle-wrap {
+    width: 70px;
+    height: 100px;
+  }
+  .hero-title {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  }
+
+  .parallax-section {
+    height: 70vh;
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+    max-height: 100dvh;
+    overflow-y: auto;
+    padding-top: var(--nav-height);
+  }
+
+  .carousel-slider {
+    min-height: auto;
+  }
+
+  .carousel-slide {
+    grid-template-columns: 1fr;
+    padding: var(--space-4) var(--space-4) var(--space-5);
+    gap: var(--space-2);
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .carousel-slide.active {
+    position: relative;
+    height: auto;
+    min-height: calc(100dvh - var(--nav-height));
+  }
+
+  .hero-content {
+    order: 1;
+    max-width: 100%;
+    margin-right: 0;
+    text-align: center;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 0;
+  }
+
+  .hero-visual {
+    order: 0;
+    padding-top: 0;
+  }
+
+  .hero-title {
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+    line-height: 1.15;
+  }
+
+  .hero-title em::after {
+    height: 3px;
+    bottom: 2px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin: 0 auto;
+  }
+
+  .benefits-list {
+    justify-content: center;
+    gap: var(--space-1);
+  }
+
+  .benefit-card {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .hero-controls {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .btn-primary {
+    padding: 14px 32px;
+    font-size: 0.8rem;
+  }
+
+  .navbar-links li:not(:last-child) {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0 var(--space-4);
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
+
+  .carousel-arrow-mobile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(8px);
+    color: var(--color-text-body);
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: all 0.2s ease;
+  }
+
+  .carousel-arrow-mobile:hover {
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    color: var(--color-accent);
+  }
+
+  .carousel-nav-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+    z-index: 15;
+  }
+
+  .carousel-arrows-row {
+    display: flex;
+    gap: var(--space-3);
+  }
+
+  .carousel-dots-mobile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .carousel-dots-wrap {
+    display: none;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .dot.active {
+    width: 20px;
+  }
+
+  .pain-section,
+  .volumes-section,
+  .benefits-section,
+  .testimonials-section,
+  .faq-section,
+  .how-section,
+  .guarantee-section {
+    padding: var(--space-6) var(--space-5);
+  }
+
+  .volumes-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .volume-desc {
+    min-height: 0;
+  }
+
+  .pain-list li {
+    font-size: 0.9rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guarantee-seals {
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: center;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .steps-grid::before {
+    display: none;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-5) var(--space-4);
+    text-align: center;
+  }
+
+  .deco-circle[data-slot="3"],
+  .deco-circle[data-slot="4"] {
+    display: none;
+  }
+
+  .fruit-visual {
+    width: 80px !important;
+  }
+
+  .deco-fruit {
+    opacity: 0.1;
+  }
+
+  .parallax-section {
+    height: 60vh;
+    min-height: 420px;
+  }
+
+  .parallax-placeholder {
+    animation: parallax-gradient 15s ease infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deco-circle { animation: none; }
+  .fruit-visual { animation: none; }
+  .deco-fruit { animation: none; }
+  .product-bottle { animation: none; }
+  .bottle-placeholder { animation: none; }
+  .parallax-placeholder { animation: none; }
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

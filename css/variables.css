@@ -1,0 +1,29 @@
+:root {
+  --color-bg-primary: #D4EDDA;
+  --color-bg-gradient: #A8D5A2;
+  --color-accent: #2E7D32;
+  --color-text-hero: #1B5E20;
+  --color-badge: #66BB6A;
+
+  --color-text-body: #2C2C2C;
+  --color-text-muted: #6B7280;
+  --color-surface: #FFFFFF;
+  --color-border: #E5E7EB;
+
+  --theme-transition: 0.7s ease-in-out;
+
+  --font-display: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+  --space-9: 128px;
+
+  --nav-height: 72px;
+}
