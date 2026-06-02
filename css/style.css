@@ -206,10 +206,14 @@ a {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --nav-height: 64px;
+  }
+
   .hero-section {
-    min-height: auto;
-    max-height: 100dvh;
-    overflow-y: auto;
+    min-height: 100dvh;
+    max-height: none;
+    overflow: hidden;
     padding-top: var(--nav-height);
   }
 
@@ -219,7 +223,7 @@ a {
 
   .carousel-slide {
     grid-template-columns: 1fr;
-    padding: var(--space-4) var(--space-4) var(--space-5);
+    padding: var(--space-3) var(--space-4) var(--space-4);
     gap: var(--space-2);
     height: auto;
     position: absolute;
@@ -232,6 +236,7 @@ a {
     position: relative;
     height: auto;
     min-height: calc(100dvh - var(--nav-height));
+    align-content: center;
   }
 
   .hero-content {
@@ -247,6 +252,21 @@ a {
   .hero-visual {
     order: 0;
     padding-top: 0;
+  }
+
+  .product-bottle,
+  .bottle-placeholder {
+    max-height: 30dvh;
+  }
+
+  .product-bottle {
+    width: auto;
+    max-width: min(42vw, 170px);
+    object-fit: contain;
+  }
+
+  .bottle-placeholder {
+    width: min(42vw, 170px, calc(30dvh * 0.6));
   }
 
   .hero-title {
@@ -291,6 +311,18 @@ a {
 
   .navbar {
     padding: 0 var(--space-4);
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .navbar-logo {
+    font-size: 1.15rem;
+  }
+
+  .navbar-cta {
+    padding: 9px 18px;
+    font-size: 0.72rem;
   }
 
   .carousel-arrow {
@@ -427,6 +459,71 @@ a {
 
   .parallax-placeholder {
     animation: parallax-gradient 15s ease infinite;
+  }
+}
+
+@media (max-width: 430px) {
+  :root {
+    --nav-height: 58px;
+  }
+
+  .carousel-slide {
+    padding: var(--space-2) var(--space-3) var(--space-3);
+    gap: var(--space-1);
+  }
+
+  .hero-content {
+    gap: var(--space-1);
+  }
+
+  .product-bottle,
+  .bottle-placeholder {
+    max-height: 26dvh;
+  }
+
+  .product-bottle {
+    max-width: min(38vw, 145px);
+  }
+
+  .bottle-placeholder {
+    width: min(38vw, 145px, calc(26dvh * 0.6));
+  }
+
+  .flavor-badge {
+    padding: 6px 14px;
+    font-size: 0.62rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.25rem, 7vw, 1.55rem);
+  }
+
+  .hero-subtitle {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .benefit-card {
+    padding: 5px 9px;
+    font-size: 0.68rem;
+  }
+
+  .hero-controls {
+    gap: var(--space-2);
+  }
+
+  .hero-section .btn-primary {
+    padding: 12px 26px;
+  }
+
+  .carousel-nav-mobile {
+    margin-top: var(--space-1);
+    gap: var(--space-1);
+  }
+
+  .carousel-arrow-mobile {
+    width: 34px;
+    height: 34px;
   }
 }
 
