@@ -533,6 +533,6 @@ a {
   .deco-fruit { animation: none; }
   .product-bottle { animation: none; }
   .bottle-placeholder { animation: none; }
-  .parallax-placeholder { animation: none; }
+  .parallax-video { animation: none; }
   * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
