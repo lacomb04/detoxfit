@@ -1262,6 +1262,7 @@
   inset: -15% -15%;
   z-index: 0;
   will-change: transform;
+  background: linear-gradient(135deg, #1a3a1a, #2d5a27, #6b8f3f, #8b7355, #3d6b35, #1a3a1a);
 }
 
 .parallax-video {
