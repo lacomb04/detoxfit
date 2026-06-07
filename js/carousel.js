@@ -41,10 +41,10 @@ class DetoxCarousel {
             ${ed.benefits.map(b => `<li class="benefit-card"><span class="benefit-dot"></span>${b}</li>`).join('')}
           </ul>
           <div class="hero-controls">
-            <button class="btn-primary">
+            <a href="${ed.link}" class="btn-primary" target="_blank" rel="noopener">
               Comprar Agora
               <span class="btn-arrow">→</span>
-            </button>
+            </a>
           </div>
         </div>
         <div class="hero-visual">
