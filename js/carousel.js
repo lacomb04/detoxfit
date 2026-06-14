@@ -36,6 +36,8 @@ class DetoxCarousel {
       slide.className = 'carousel-slide';
       slide.dataset.index = index;
 
+      const isMobile = window.innerWidth <= 768;
+      const mobileHeadline = ed.headline.replace(/<br\s*\/?>/gi, ' ');
       slide.innerHTML = `
         <div class="hero-content">
           <div class="hero-product-section">
@@ -43,7 +45,7 @@ class DetoxCarousel {
               <span class="badge-dot"></span>
               ${ed.badge}
             </span>
-            <h2 class="hero-title">${ed.headline}</h2>
+            <h2 class="hero-title${isMobile ? ' hero-title-mobile' : ''}">${isMobile ? mobileHeadline : ed.headline}</h2>
             <p class="hero-subtitle">${ed.description}</p>
           </div>
           <ul class="benefits-list">
