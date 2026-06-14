@@ -5,8 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
   carousel.init();
 
   const navbar = document.getElementById('navbar');
+  const promoBar = document.getElementById('promoBar');
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 60);
+    if (promoBar) promoBar.classList.toggle('scrolled', window.scrollY > 60);
   });
 
   const navLinks = document.querySelectorAll('.navbar-links a[href^="#"]');
@@ -132,6 +134,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // --- Promo bottle convergence loop ---
+  const promoCardMain = document.getElementById('promoCard');
+  if (promoCardMain) {
+    const btlV = promoCardMain.querySelector('.btl-verde');
+    const btlM = promoCardMain.querySelector('.btl-vermelho');
+    const btlL = promoCardMain.querySelector('.btl-laranja');
+    const cardTitle = promoCardMain.querySelector('.promo-card-title');
+    if (btlV && btlM && btlL) {
+      gsap.set(cardTitle, { scale: 0.7, opacity: 0 });
+      ScrollTrigger.create({
+        trigger: promoCardMain,
+        start: 'top 85%',
+        once: true,
+        onEnter: () => {
+          const tl = gsap.timeline({
+            defaults: { ease: 'power2.inOut', duration: 0.6 },
+            repeat: -1,
+            repeatDelay: 2,
+          });
+          tl.to(btlV, { x: 0 }, 0)
+            .to(btlL, { x: 0 }, 0)
+            .to(cardTitle, { scale: 1, opacity: 1 }, '-=0.3')
+            .to({}, { duration: 2.5 })
+            .to(btlV, { x: -70 }, '+=0')
+            .to(btlL, { x: 70 }, '+=0')
+            .to(cardTitle, { scale: 0.7, opacity: 0 }, '-=0.3');
+        },
+      });
+    }
+  }
+
   // --- Click fruit to change theme ---
   document.addEventListener('click', e => {
     const fruit = e.target.closest('.deco-fruit');
@@ -146,6 +179,8 @@ document.addEventListener('DOMContentLoaded', () => {
     root.style.setProperty('--color-accent', theme.accent);
     root.style.setProperty('--color-text-hero', theme.textHero);
     root.style.setProperty('--color-badge', theme.badge);
+    const promoBar = document.getElementById('promoBar');
+    if (promoBar) promoBar.style.color = theme.accent;
     const edIdx = fruitToEdition[name];
     if (edIdx !== undefined && carousel.currentIndex !== edIdx) {
       carousel.goTo(edIdx);

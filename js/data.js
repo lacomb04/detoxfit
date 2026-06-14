@@ -1,8 +1,10 @@
+const comboLink = 'https://pay.kiwify.com.br/KxLAo2T';
+
 const ebookEditions = [
   {
     id: 'verde',
     name: 'Detox Verde',
-    link: 'https://pay.kiwify.com.br/NOgf6Yc',
+    link: comboLink,
     badge: 'VOLUME 1',
     headline: 'ELIMINE TOXINAS<br>E PERCA ATÉ 5KG<br><em>EM 7 DIAS</em>',
     description: 'Smoothies verdes, sucos detox e bowls nutritivos com ingredientes que desintoxicam e energizam.',
@@ -24,7 +26,7 @@ const ebookEditions = [
   {
     id: 'vermelho',
     name: 'Detox Vermelho',
-    link: 'https://pay.kiwify.com.br/Bl8R7cs',
+    link: comboLink,
     badge: 'VOLUME 2',
     headline: 'PELE RADIANTE<br>E CORPO LIVRE<br><em>DE INCHAÇO</em>',
     description: 'Vitaminas antioxidantes, chás termogênicos e refeições leves para proteger e revitalizar.',
@@ -46,7 +48,7 @@ const ebookEditions = [
   {
     id: 'laranja',
     name: 'Detox Laranja',
-    link: 'https://pay.kiwify.com.br/SGz1vnO',
+    link: comboLink,
     badge: 'VOLUME 3',
     headline: 'ACELERE SEU<br>METABOLISMO E<br><em>QUEIME GORDURA</em>',
     description: 'Sucos dourados, cremes e saladas com cúrcuma e cenoura para uma pele radiante de dentro para fora.',

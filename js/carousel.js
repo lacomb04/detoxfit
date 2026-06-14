@@ -20,6 +20,13 @@ class DetoxCarousel {
     this.setupListeners();
     this.applyTheme(0);
     this.showSlide(0, false);
+    if (this.editions.length <= 1) {
+      this.prevBtn.style.display = 'none';
+      this.nextBtn.style.display = 'none';
+      this.dotsContainer.style.display = 'none';
+      document.querySelectorAll('.carousel-nav-mobile').forEach(el => el.style.display = 'none');
+      return;
+    }
     this.startAutoPlay();
   }
 
@@ -31,12 +38,14 @@ class DetoxCarousel {
 
       slide.innerHTML = `
         <div class="hero-content">
-          <span class="flavor-badge">
-            <span class="badge-dot"></span>
-            ${ed.badge}
-          </span>
-          <h1 class="hero-title">${ed.headline}</h1>
-          <p class="hero-subtitle">${ed.description}</p>
+          <div class="hero-product-section">
+            <span class="flavor-badge">
+              <span class="badge-dot"></span>
+              ${ed.badge}
+            </span>
+            <h2 class="hero-title">${ed.headline}</h2>
+            <p class="hero-subtitle">${ed.description}</p>
+          </div>
           <ul class="benefits-list">
             ${ed.benefits.map(b => `<li class="benefit-card"><span class="benefit-dot"></span>${b}</li>`).join('')}
           </ul>
@@ -203,7 +212,6 @@ class DetoxCarousel {
     this.isTransitioning = true;
 
     const goingNext = index > this.currentIndex;
-    const isWrapping = Math.abs(index - this.currentIndex) > 1;
     const dir = goingNext ? 1 : -1;
     const slideX = 280;
 

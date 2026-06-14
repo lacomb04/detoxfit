@@ -37,7 +37,7 @@ a {
   background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-gradient) 100%);
   transition: background var(--theme-transition);
   overflow: hidden;
-  padding-top: var(--nav-height);
+  padding-top: calc(var(--nav-height) + 32px);
   min-height: 100dvh;
 }
 
@@ -68,7 +68,7 @@ a {
   pointer-events: none;
   position: relative;
   height: auto;
-  min-height: calc(100dvh - var(--nav-height));
+  min-height: calc(100dvh - var(--nav-height) - 32px);
 }
 
 .carousel-slide.active .hero-content {
@@ -159,7 +159,7 @@ a {
     overflow-y: auto;
   }
   .carousel-slide.active {
-    min-height: calc(100dvh - var(--nav-height));
+    min-height: calc(100dvh - var(--nav-height) - 28px);
   }
   .navbar {
     padding: 0 var(--space-7);
@@ -214,7 +214,7 @@ a {
     min-height: 100dvh;
     max-height: none;
     overflow: hidden;
-    padding-top: var(--nav-height);
+    padding-top: calc(var(--nav-height) + 28px);
   }
 
   .carousel-slider {
@@ -235,7 +235,7 @@ a {
   .carousel-slide.active {
     position: relative;
     height: auto;
-    min-height: calc(100dvh - var(--nav-height));
+    min-height: calc(100dvh - var(--nav-height) - 28px);
     align-content: center;
   }
 
@@ -462,6 +462,43 @@ a {
   }
 }
 
+.promo-bar {
+  position: fixed;
+  top: calc(var(--nav-height) + 40px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background: #ffffff;
+  color: var(--color-accent);
+  text-align: center;
+  padding: 6px 24px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(0.85rem, 2vw, 1.15rem);
+  letter-spacing: -0.02em;
+  transition: all 0.4s cubic-bezier(0.34, 1.2, 0.64, 1), color var(--theme-transition);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  line-height: 1.2;
+  width: auto;
+  white-space: nowrap;
+  border-radius: 100px;
+}
+
+.promo-bar.scrolled {
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  transform: none;
+  border-radius: 0;
+  padding: 6px 16px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  white-space: normal;
+}
+
+.hero-product-section {
+  margin-bottom: var(--space-2);
+}
+
 @media (max-width: 430px) {
   :root {
     --nav-height: 58px;
@@ -535,4 +572,290 @@ a {
   .bottle-placeholder { animation: none; }
   .parallax-video { animation: none; }
   * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* --- Combo Visual (Hero Carousel) --- */
+.combo-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.combo-bottles-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.combo-bottle-item {
+  width: min(100px, 18vw);
+  height: min(150px, 27vw);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+
+.combo-bottle-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.combo-plus {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  opacity: 0.6;
+}
+
+.combo-price-display {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.combo-old-price {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--color-text-body);
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.combo-new-price {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+/* --- Promo Card (Volume Único) --- */
+.volumes-grid-single {
+  max-width: 500px;
+  margin: 0 auto;
+  grid-template-columns: 1fr !important;
+}
+
+.volume-card-promo {
+  position: relative;
+  border: 2px solid var(--color-accent) !important;
+  box-shadow: 0 0 0 4px rgba(230,81,0,0.15), 0 16px 48px rgba(230,81,0,0.1) !important;
+  overflow: hidden !important;
+  padding-top: 44px !important;
+}
+
+.volume-card-promo::before {
+  background: linear-gradient(90deg, #43A047, #E53935, #FB8C00) !important;
+}
+
+.volume-promo-ribbon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #E53935;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  padding: 6px 0;
+  text-align: center;
+  z-index: 5;
+  box-shadow: 0 2px 8px rgba(229,57,53,0.3);
+}
+
+.promo-bottles-stage {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  margin: 0 auto var(--space-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-bottle {
+  width: 80px;
+  height: 130px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.12));
+  position: absolute;
+}
+
+.promo-bottle.btl-verde {
+  transform: translateX(-70px);
+  z-index: 1;
+}
+
+.promo-bottle.btl-vermelho {
+  z-index: 2;
+}
+
+.promo-bottle.btl-laranja {
+  transform: translateX(70px);
+  z-index: 1;
+}
+
+.promo-card-title {
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease;
+}
+
+.volume-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.volume-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--color-bg-primary);
+  border-radius: 10px;
+  transition: background var(--theme-transition);
+}
+
+.vol-dot {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.vol-dot.verde { background: #43A047; }
+.vol-dot.vermelho { background: #E53935; }
+.vol-dot.laranja { background: #FB8C00; }
+
+.vol-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.vol-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: -0.01em;
+}
+
+.vol-desc {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.3;
+}
+
+.volume-badge-mega {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.08em;
+  color: #fff;
+  padding: 5px 18px !important;
+  border-radius: 100px;
+  margin-bottom: var(--space-2) !important;
+}
+
+.volume-price-comparison {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.volume-old-price {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.volume-savings {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  background: #E53935;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.volume-price-caption {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: -8px 0 var(--space-3);
+  text-align: center;
+}
+
+@keyframes pulse-btn {
+  0%, 100% { box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+  50% { box-shadow: 0 8px 32px var(--color-accent), 0 0 0 6px rgba(230,81,0,0.15); }
+}
+
+.volume-card-promo .btn-primary {
+  animation: pulse-btn 2s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .combo-bottle-item {
+    width: min(75px, 22vw);
+    height: min(110px, 33vw);
+  }
+
+  .combo-plus {
+    font-size: 1.1rem;
+  }
+
+  .volume-card-promo {
+    padding-top: 40px !important;
+  }
+
+  .volume-promo-ribbon {
+    font-size: 0.6rem;
+    padding: 5px 0;
+  }
+
+  .promo-bottle-wrap {
+    width: 90px;
+    height: 130px;
+  }
+
+  .volumes-grid-single {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .combo-bottle-item {
+    width: min(60px, 20vw);
+    height: min(90px, 30vw);
+  }
+
+  .promo-bottle-wrap {
+    width: 80px;
+    height: 115px;
+  }
 }
