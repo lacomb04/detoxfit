@@ -298,7 +298,7 @@ a {
   }
 
   .hero-product-section .hero-title {
-    margin-bottom: var(--space-5);
+    margin-bottom: 10px;
     margin-top: 0;
   }
 
