@@ -464,10 +464,19 @@ a {
 
 .promo-bar {
   position: fixed;
-  top: calc(var(--nav-height) + 40px);
-  left: 50%;
-  transform: translateX(-50%);
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
   z-index: 999;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.promo-bar-inner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #ffffff;
   color: var(--color-accent);
   text-align: center;
@@ -476,22 +485,22 @@ a {
   font-weight: 800;
   font-size: clamp(0.85rem, 2vw, 1.15rem);
   letter-spacing: -0.02em;
-  transition: all 0.4s cubic-bezier(0.34, 1.2, 0.64, 1), color var(--theme-transition);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
   line-height: 1.2;
-  width: auto;
   white-space: nowrap;
   border-radius: 100px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transform: translateY(40px);
+  transition: transform 0.4s cubic-bezier(0.34, 1.2, 0.64, 1), border-radius 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease, color var(--theme-transition);
+  pointer-events: auto;
+  will-change: transform;
 }
 
-.promo-bar.scrolled {
-  top: var(--nav-height);
-  left: 0;
-  right: 0;
-  transform: none;
+.promo-bar.scrolled .promo-bar-inner {
+  width: 100%;
   border-radius: 0;
   padding: 6px 16px;
   box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  transform: none;
   white-space: normal;
 }
 

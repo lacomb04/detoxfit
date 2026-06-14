@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 60);
     if (promoBar) promoBar.classList.toggle('scrolled', window.scrollY > 60);
-  });
+  }, { passive: true });
 
   const navLinks = document.querySelectorAll('.navbar-links a[href^="#"]');
   navLinks.forEach(link => {
@@ -179,8 +179,8 @@ document.addEventListener('DOMContentLoaded', () => {
     root.style.setProperty('--color-accent', theme.accent);
     root.style.setProperty('--color-text-hero', theme.textHero);
     root.style.setProperty('--color-badge', theme.badge);
-    const promoBar = document.getElementById('promoBar');
-    if (promoBar) promoBar.style.color = theme.accent;
+    const promoBarInner = document.querySelector('#promoBar .promo-bar-inner');
+    if (promoBarInner) promoBarInner.style.color = theme.accent;
     const edIdx = fruitToEdition[name];
     if (edIdx !== undefined && carousel.currentIndex !== edIdx) {
       carousel.goTo(edIdx);
