@@ -502,6 +502,42 @@
   filter: drop-shadow(0 8px 24px rgba(0,0,0,0.25));
 }
 
+.parallax-fruits {
+  z-index: 3;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.parallax-fruit {
+  position: absolute;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 20px rgba(0,0,0,0.3)) brightness(1.1);
+  opacity: 0.5;
+  will-change: transform;
+  animation: float-parallax-fruit 6s ease-in-out infinite;
+  animation-delay: var(--float-delay, 0s);
+}
+
+@keyframes float-parallax-fruit {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25%      { transform: translateY(-14px) rotate(3deg); }
+  50%      { transform: translateY(-6px) rotate(-2deg); }
+  75%      { transform: translateY(-10px) rotate(2deg); }
+}
+
+@media (max-width: 768px) {
+  .parallax-fruit {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax-fruit { animation: none; }
+}
+
 .carousel-nav-mobile {
   display: none;
 }
@@ -1262,14 +1298,7 @@
   inset: -15% -15%;
   z-index: 0;
   will-change: transform;
-  background: linear-gradient(135deg, #1a3a1a, #2d5a27, #6b8f3f, #8b7355, #3d6b35, #1a3a1a);
-}
-
-.parallax-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  background: url('../assets/images/background.webp') center / cover no-repeat;
 }
 
 .parallax-overlay {
